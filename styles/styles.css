@@ -1,0 +1,258 @@
+/* default styles and reset */
+
+:root {
+  --defaultColor: seashell;
+  --bg-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--defaultColor);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(0, 48rem) minmax(1rem, 1fr);
+}
+
+/* header styles */
+
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--defaultColor);
+  background-color: var(--bg-color);
+}
+
+.logo-div {
+  margin-block: 1rem;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0.5rem 1.5rem;
+}
+
+.navlink {
+  font-size: 1rem;
+  color: var(--defaultColor);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navlink:hover {
+  text-decoration: underline;
+}
+
+/* hero styles */
+.hero {
+  grid-column: 1 / -1;
+  height: calc(100vh - 7.6rem);
+  background-image: url('../assets/images/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  background-color: var(--bg-color);
+  opacity: 0.9;
+  width: 100%;
+  padding: 1rem;
+}
+
+.hero-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+}
+
+/* featured teas */
+.featured {
+  grid-column: 2;
+}
+
+.featured-heading,
+.featured-tagline {
+  margin-bottom: 1rem;
+}
+
+.featured-heading {
+  padding-top: 1rem;
+}
+
+.featured-tagline {
+  font-size: 1.2rem;
+}
+
+.featured-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-desc {
+  margin-block: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* locations styles */
+.locations {
+  grid-column: 1 / -1;
+  background-image: url('../assets/images/locations.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2rem;
+}
+
+.locations-heading {
+  padding-top: 1rem;
+}
+
+.locations-grid {
+  display: grid;
+  justify-items: center;
+}
+
+.location-div {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  margin: 1rem;
+  width: 75%;
+  line-height: 1.8;
+}
+
+/* footer styles */
+.footer {
+  grid-column: 1 /-1;
+  margin-block: 1rem;
+  line-height: 1.8;
+}
+
+.phone,
+.email {
+  color: var(--defaultColor);
+}
+
+@media only screen and (min-width: 48rem) {
+  .navlist {
+    width: 75%;
+    margin: 0.5rem auto;
+  }
+
+  .navlink {
+    font-size: 1.2rem;
+  }
+
+  .featured-imgs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .featured-img-div > img {
+    height: 200px;
+    width: 300px;
+  }
+
+  .location-div {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .container {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 64rem) minmax(1rem, 1fr);
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo-div {
+    justify-self: flex-start;
+    margin-left: 2rem;
+  }
+
+  .navbar {
+    justify-self: flex-end;
+    width: 75%;
+  }
+
+  .hero {
+    height: calc(100vh - 4.4rem);
+  }
+
+  .locations {
+    height: 500px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .locations-heading {
+    grid-row: 1;
+    align-self: flex-end;
+    padding: 0;
+  }
+
+  .locations-grid {
+    grid-row: 2;
+    grid-template-columns:
+      1fr minmax(0, 20rem) minmax(0, 20rem) minmax(0, 20rem)
+      1fr;
+    gap: 2rem;
+    margin-inline: 3rem;
+  }
+
+  .location-div {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .location-div.one {
+    grid-column: 2;
+  }
+
+  .location-div.two {
+    grid-column: 3;
+  }
+
+  .location-div.three {
+    grid-column: 4;
+  }
+}
