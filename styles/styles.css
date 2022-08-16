@@ -170,6 +170,7 @@ img {
 .phone,
 .email {
   color: var(--defaultColor);
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 48rem) {
