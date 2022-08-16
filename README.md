@@ -4,6 +4,13 @@ This project is part of my [Codecademy full-stack learning path](https://www.cod
 
 I started completing the Codecademy full stack learning path to cement knowledge gained in my current web development course and although it starts with basic tasks it has so far been great for revision.
 
+Areas I was able to revise:
+
+- CSS grid
+- CSS Flexbox
+- Mobile first responsive design
+- General CSS/HTML implementation
+
 ## Installation
 
 If you would like to view the project then download the folder from this repository and you will just be able to open the index.html file in your web browser.
