@@ -74,7 +74,7 @@ img {
 .hero {
   grid-column: 1 / -1;
   height: calc(100vh - 7.6rem);
-  background-image: url('../assets/images/background.jpeg');
+  background-image: url("../assets/images/background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -123,6 +123,10 @@ img {
   align-items: center;
 }
 
+.featured-img-div > img {
+  border-radius: 0.5rem;
+}
+
 .img-desc {
   margin-block: 0.5rem;
   font-size: 1.2rem;
@@ -131,7 +135,7 @@ img {
 /* locations styles */
 .locations {
   grid-column: 1 / -1;
-  background-image: url('../assets/images/locations.jpeg');
+  background-image: url("../assets/images/locations.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -153,6 +157,7 @@ img {
   margin: 1rem;
   width: 75%;
   line-height: 1.8;
+  border-radius: 0.5rem;
 }
 
 /* footer styles */
